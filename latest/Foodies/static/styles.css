@@ -1,0 +1,8 @@
+.carousel-item {
+    height: calc(100vh - 56px); /* Subtract the height of the navbar (adjust as needed) */
+}
+.carousel-item img {
+    width: 100%; /* Make the image fill the entire width of its container */
+    height: 100%; /* Make the image fill the entire height of its container */
+    object-fit: cover; /* Ensure the image covers the entire container while preserving aspect ratio */
+}

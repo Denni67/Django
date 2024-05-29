@@ -1,0 +1,96 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+#customers {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#customers th,
+#customers td {
+    padding: 10px;
+    border: 1px solid green;
+    text-align: left;
+    
+}
+
+#customers th {
+    background-color: aquamarine;
+}
+
+/* Button Styles */
+#new3 {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+#new3:hover {
+    background-color: #0056b3;
+}
+
+#up {
+    background-color: rgba(60, 105, 17, 0.295);
+    color: #000; /* Change text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#up:hover {
+    background-color: #ffd700; /* Change hover color */
+}
+
+#del {
+    background-color: #dc3545; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#del:hover {
+    background-color: #c82333; /* Hover color */
+}

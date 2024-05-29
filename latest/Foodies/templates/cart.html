@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .empty-cart-video {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
+        .empty-cart-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .empty-cart-content p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+  {% include 'header.html' %}
+
+    <div class="container">
+        <h1>Your Cart</h1>
+        {% if cart_items %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <td><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="100"></td>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.product.price }} Rs</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.total_price }} Rs</td>
+                        <td>
+                            <a href="{% url 'remove_from_cart' item.id %}" class="btn btn-danger btn-sm">Remove</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p>Total Price: {{ total_price }} Rs</p>
+            <div class="text-right">
+                <a href="{% url 'productpage' %}" class="btn btn-secondary">Continue Shopping</a>
+            </div>
+        {% else %}
+            <div class="empty-cart">
+                <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/empty-basket-8638089-6885376.mp4" autoplay muted loop class="empty-cart-video"></video>
+                <div class="empty-cart-content">
+                    <p>Your cart is empty.</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

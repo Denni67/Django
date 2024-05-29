@@ -1,0 +1,39 @@
+<html>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style2.css' %}" />
+    <body>
+    <div>
+        <h1> Restaurant </h1>
+        <table id="customers" border=1>
+            <tr>
+                <th> Restaurant_ID </th>
+                <th> Restaurant </th>
+                <th> Address </th>
+                <th> Mobile Number</th>
+                <th> Email</th>
+                <th> Opening hours</th>
+                <th> Ratings</th>
+        
+                <th colspan=2 id="mid">Action</th>
+            </tr>
+            {%for x in res %}
+
+            <tr>
+                <td>{{x.id}} </td>
+                <td>{{x.restaurant_name}} </td>
+                <td>{{x.address}} </td>
+                <td>{{x.mobile_number}} </td>
+                <td>{{x.email}} </td>
+                <td>{{x.opening_hours}} </td>
+                <td>{{x.ratings}} </td>
+                <td> <a href="update/{{x.id}}"><button id="up">UPDATE</button></a></td>
+                <td> <a href="delete/{{x.id}}"><button id="del">DELETE</button></a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        <br>
+        <a href="{%url 'add'%}"><button id="new3">Submit</button></a>
+    </div>
+    <body>
+</html>

@@ -1,0 +1,81 @@
+/* Custom CSS for Flipkart-like Cart Template */
+
+/* Basic styling for the cart table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Style for the header row */
+th {
+    background-color: #f5f5f5;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style for the product name */
+td:first-child {
+    width: 40%;
+}
+
+/* Style for the "Remove" link */
+a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for buttons */
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #0066c0;
+    background-color: #0066c0;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056a4;
+}
+
+/* Container style */
+.container {
+    margin-top: 20px;
+}
+
+/* Total section */
+.total-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+.total-section h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.total-section .total {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    td:first-child {
+        width: 30%;
+    }
+}
